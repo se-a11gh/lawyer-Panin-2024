@@ -1,0 +1,120 @@
+
+/* Футер */
+.footer_main { 
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #1D1B1B;
+    color: white;
+}
+.logo_foter{
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.logo_foterSvg{
+    width: 200px;
+    height: 200px;
+    fill:rgb(88, 88, 88);
+}
+.links{
+    display: flex;
+}
+.menu_foter{
+    width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.menu_foter p{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.menu_foter ul li a{
+    font-size: 17px;
+    line-height: 30px;
+    color: white;
+    font-weight: normal;
+}
+.menu_foter ul{
+   margin: 5px 0 5px 0;
+}
+.btn_menu {
+    position: relative;
+   cursor: pointer;
+   width: 38px;
+   height: 38px;
+   z-index: 250;
+ }
+ .btn_menu span{
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+ }
+ .btn_menu::before, .btn_menu::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 35px;
+  height: 3px;
+    background-color: white;
+    transition: all 0.8s;
+ }
+ .btn_menu::before{
+    top:10px;
+ }
+ .btn_menu::after{
+    top:30px;
+    height: 2px;
+ }
+
+ .btn_menu.active2::before{
+    width: 25px;
+    top:15px;
+    transform: rotate(45deg);
+    background-color: rgb(30, 30, 30);
+ }
+ .btn_menu.active2::after{
+    width: 25px;
+    top:15px;
+    transform: rotate(-45deg);
+    background-color: rgb(30, 30, 30);
+ }
+.btn_menu.active2 span{
+    transform: scale(0);
+}
+
+
+
+
+
+/* Адаптив */
+@media(max-width:700px){
+.footer_main {
+    flex-direction: column-reverse;
+}
+.footer_main > div:nth-child(2){
+    border-top: 1px solid white;
+}
+.menu_foter{
+    width: 100%;
+}
+.logo_foterSvg {
+    width: 100px;
+    height: 100px;
+}
+.menu_foter p {
+    font-size: 18px;
+}
+.menu_foter ul li a{
+    font-size: 16px;
+}
+}  
+
+

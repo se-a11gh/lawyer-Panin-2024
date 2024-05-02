@@ -1,0 +1,284 @@
+/* Блок2(Наші спеціалісти) */
+.Block_2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    background-image: url('../media/circle.png');
+    background-repeat: no-repeat;
+    background-size: 750px auto;
+    background-position:left;
+    color: white;
+}
+.block_about_experts{
+    position: sticky;
+    top: 100px;
+    max-width: 605px;
+    height: 500px;
+    background: rgba(15, 11, 26, 0.9);
+    margin: 20px 0 20px 10px;
+    padding: 40px;
+    box-sizing: border-box;
+}.block_about_experts p{
+   font-size: 34px;
+}.block_about_experts span{
+    color: #FFC554;
+    font-weight: bold;
+}
+.block_experts{
+    display: flex;
+    justify-content: center;
+    width: 650px;
+}
+.expert_1, .expert_2{
+    width: 46%;
+    margin: 0 10px 0 10px;
+}
+.expert_2{
+    margin-top: 150px;
+}
+.expertCard{
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+.expertCard__photo{
+    width: 100%;
+    height: 350px;
+}.expertCard__photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+.expertCard__about{
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+.btn_selectExp{
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+}
+.adv_fon, .adv_fon_sertf{
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 5, 0.9);
+    z-index: 50;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+.adv_fon_sertf{
+    flex-direction: column;
+}.adv_fon_sertf > img{
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+.btn_close_sertf{
+    display: block;
+    width: 24px;
+    cursor: pointer;
+    border:1px solid white;
+    padding: 10px;
+    margin: 10px;
+}.btn_close_sertf:hover{
+    transition: all 1s;
+    background-color: rgb(72, 72, 72);
+}
+.adv_fon__content{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.btn_close_adv{
+    align-self: flex-end;
+    width: 24px;
+    cursor: pointer;
+    margin: 5px;
+}
+.wrapp_info_up{
+    display: flex;
+}
+.adv_fon__content_foto{
+    width: 190px;
+}.adv_fon__content_foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.adv_fon__content_info{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.adv_fon__content_name p{
+    font-weight: bold;
+    margin-bottom:15px;
+    box-sizing: border-box;
+}
+.wrapp_info_down{
+    padding: 15px;
+    box-sizing: border-box;
+}
+.adv_fon__content_about_more{
+    margin: 20px 0 20px 0;
+}
+.fon_contacts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.adv_fon__content_numbers, .adv_fon__content_about {
+    font-size: 16px;
+}
+.adv_fon__content_social {
+    display: flex;
+} 
+.adv_fon__content_social a{
+  display: block;
+}
+.advk_svg{
+    fill: black;
+    width: 20px;
+}
+ 
+
+
+/* Адаптив */
+@media(max-width:1300px){
+.block_experts{
+    width: 50%;
+}
+.block_about_experts {
+    max-width: 45%;
+}
+}
+
+@media(max-width:1100px){
+.expertCard__photo{
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+.block_about_experts p{
+    font-size: 30px;
+}
+.block_about_experts {
+    padding: 30px;
+    height: 450px;
+}
+.expertCard__photo img{
+    height: auto;
+}
+.expertCard__about p{
+    font-size: 15px;
+}
+}
+
+@media(max-width:900px){
+.block_about_experts {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    background: rgba(15, 11, 26, 1);
+    margin: 0;
+    padding: 20px;
+}
+.block_about_experts p {
+    font-size: 25px;
+    text-align: center;
+}
+.block_experts {
+    width: 70%;
+}
+.expertCard__photo img {
+    height: 285px;
+}
+.expertCard {
+    width: 250px;
+}
+.expert_1, .expert_2 {
+    width: 100%;
+}
+}
+
+@media(max-width:600px){
+.adv_fon__content_name p, .adv_fon__content_about_more {
+    font-size: 16px;
+}
+.btn_close_adv {
+    width: 21px;
+}
+.adv_fon__content_numbers, .adv_fon__content_about {
+    font-size: 15px;
+}
+.advk_svg {
+    width: 18px;
+}
+}
+
+
+@media(max-width:550px){
+.expertCard__photo{
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}.expertCard__photo img {
+    height: auto;
+}
+.block_about_experts p{
+    font-size: calc(var(--index) * 1.8);
+}
+.expertCard {
+    width: 100%;
+}
+.block_experts {
+    width: 100%;
+}
+.btn_selectExp {
+    height: 40px;
+    font-size: 15px;
+}
+.expert_1, .expert_2 {
+    margin: 0 3px 0 3px;
+} 
+.expertCard__about {
+    height: 63px;
+}.expertCard__about p {
+    font-size: 14px;
+}
+}
+
+@media(max-width:450px){
+.expertCard__about p {
+    font-size: 13px;
+}
+.btn_selectExp {
+    height: 36px;
+    font-size: 14px;
+}
+.adv_fon__content_name p, .adv_fon__content_about_more {
+    font-size: 14px;
+}
+}
+
+

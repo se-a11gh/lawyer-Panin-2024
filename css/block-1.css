@@ -1,0 +1,222 @@
+
+/* Блок1 (Наш спектр послуг)*/
+.Block_1{
+    display: flex;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+.Block_1__left, .Block_1__right, .Block_1__right_aboutList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Block_1__left {
+    width: 43%;
+    height: 100%;
+    background-color: rgb(100, 106, 114);
+}
+.Block_1__left_list{
+    width: 450px;
+    height: 500px;
+}
+.navList{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 10px 0 10px 0;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #2A3F5D;
+    transition: all 1s;
+}.navList:hover{
+    background-color: #0e1929;
+}
+.navList p{
+    width: 80%;
+    padding: 15px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+}
+.navList img{
+    width: 18px;
+    height: 11px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.asideContent{
+    width: 100%;
+    height: 0px;
+    transition: all 0.7s;
+    background-color: white;
+    overflow: hidden;
+}
+.asideContent ul li{
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+}.asideContent ul li:hover{
+    font-weight: bold;
+    border-bottom:1px solid rgb(191, 191, 191);
+}
+.Block_1__right {
+    background-image: url('../media/femida.avif');
+    background-size: cover;
+    background-position: center;
+    width: 57%;
+    height: 100%;
+}
+.Block_1__right_aboutList{
+    width: 550px;
+    height: 500px;
+    background: rgba(17, 15, 36, 0.9);
+    color: #FFC554;
+    font-size: 25px;
+    text-align: center;
+    transform: translate(172px, 0);
+}
+.Block_1__right_aboutList div{
+    opacity: 1;
+}
+._anim-items{
+    opacity: 0;
+    transition: all 1s;
+}
+._active{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.h2Bl-1{
+    margin: 15px 0 15px 0;
+}
+.Block_1__right_aboutList p{
+    color: white;
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+
+
+
+
+
+/* Адаптив */
+@media(max-width:1150px){
+.Block_1__right_aboutList {
+    width: 480px;
+    height: 400px;
+    font-size: 23px;
+}
+.Block_1 {
+    height: 650px;
+}
+.Block_1__left_list {
+    width: 100%;
+    margin-left: 50px;
+    height: 400px;
+}
+.navList {
+    width: 90%;
+}
+}
+
+@media(max-width:1000px){
+.Block_1__left {
+    width: 51%;
+}
+.Block_1__right_aboutList {
+    width: 420px;
+    height: 325px;
+    font-size: 19px;
+}
+.Block_1__right {
+    width: 48.9%;
+}
+}
+
+@media(max-width: 900px){
+.Block_1__right_aboutList {
+    width: 340px;
+    height: 282px;
+    font-size: 17px;
+}
+.Block_1__right {
+    width: 45.9%;
+}
+.Block_1__left {
+    width: 54%;
+}
+}
+
+@media(max-width: 800px){
+.Block_1 {
+    height: auto;
+    flex-direction: column-reverse;
+}
+.Block_1__right, .Block_1__left {
+    width: 100%;
+}
+.Block_1__left_list {
+    height: auto;
+    margin-left: 75px;
+}
+.Block_1__right_aboutList {
+    width: 81%;
+    height: 356px;
+    font-size: 24px;
+    margin: 15px 0 15px 0;
+}
+}
+
+@media(max-width:750px){
+.Block_1__left_list {
+    margin-left: 65px;
+}
+}
+
+@media(max-width:600px){
+.Block_1__left_list {
+    margin-left: 52px;
+}
+}
+
+@media(max-width:550px){
+.Block_1__left_list {
+    margin-left: 25px;
+}
+.Block_1__right_aboutList {
+    width: 95%;
+    height: 248px;
+    font-size: 18px;
+}
+.navList {
+    width: 95%;
+}.navList p {
+    padding: 12px;
+}
+.navList img {
+    width: 16px;
+    height: 9px;
+}
+}
+
+@media(max-width:450px){
+.Block_1__left_list {
+    margin-left: 20px;
+}
+}
+
+
+
+
+
+
+
+

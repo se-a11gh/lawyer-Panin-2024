@@ -1,0 +1,418 @@
+html, body{
+    height: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family:"CLEANVEL";
+    --index:calc(1vw + 1vh);
+}
+body.page_lock{  overflow: hidden; }
+
+.h2Bl-2{
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+@font-face {
+    font-family:"CLEANVEL";
+    src:url("../fonts/CLEANVEL.woff2");
+    font-display: swap;
+    font-style: normal;
+}
+
+.btn_up{
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 92, 183);
+    border:1px solid #0084ff;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 5;
+    padding: 7px;
+    box-sizing: border-box;
+}.btn_up svg{
+    fill: white;
+}
+
+.btn_phone{
+    position: fixed;
+    bottom: 5%;
+    width: 50px;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 5;
+
+    right: 5%;
+    animation-name: phone;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes phone {
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-20deg);}
+    100%{transform: rotate(90deg);}
+}
+.btn_visib{
+    visibility: visible;
+}
+.btn{ /*-- Общие стили для кнопок--*/
+    width: 95%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 19px;
+    color: white;
+    background-color: #D84949;
+    cursor: pointer;
+    transition: background 1s;
+}.btn:hover{
+    background-color: #c22121;
+}
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* popUp-window */
+.fon_popUp, .fon_aside_menu, .fon_popUp_ask { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 5, 0.8);
+    z-index: 250;
+}
+.fon_popUp, .fon_popUp_ask{
+    visibility: hidden;
+    display: flex;
+}
+
+
+
+.bl_consult{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 485px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.headConsl{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.btn_close_pop{
+    width: 25px;
+    cursor: pointer;
+}
+.block_form{
+    width: 100%;
+}
+.block_form input{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 5px 0;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+    padding: 5px;
+    box-sizing: border-box;
+}.block_form input:focus{
+    background-color: #dadada;
+}
+#textSizeArea{
+    width: 100%;
+    height: 150px;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}#textSizeArea:focus{
+    background-color: #dadada;
+}
+.block_form .btn_form{
+    height: 50px;
+    border: 1px solid;
+}
+
+
+
+
+/* Боковое меню */
+.wrap_aside_menu{
+    display: flex;
+    width: 450px;
+    height: 100%;
+    background: white;
+}
+.bl_aside_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    background: white;
+}
+.aside_menu_head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    background: white;
+    cursor: default;
+}
+.aside_menu_head img, .wrap_logo svg{
+    width: 35px;
+    cursor: pointer;
+}
+.wrap_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+}.wrap_logo p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.aside_menu_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+}
+.wrap_btns{
+    width: 400px;
+    border-bottom: 0.7px solid rgb(209, 209, 209);
+    background: white;
+    transition: border 0.4s;
+    cursor: pointer;
+}
+.wrap_btns a{
+    display: block;
+    padding: 25px;
+    box-sizing: border-box;
+    color: rgb(20, 20, 20);
+    font-size: 23px;
+}
+.wrap_btns:hover{
+    font-weight: bold;
+    border: 0.7px solid rgb(209, 209, 209);
+    border-left: 5px solid #122542;
+}
+.aside_menu_footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background: #122542;
+    color: white;
+}
+.aside_adress p:first-child {
+    border-bottom: 1px solid white;
+}
+.aside_adress p {
+    padding: 10px;
+}
+.aside_socLink {
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+}
+.socLink_svg{
+    width: 23px;
+    height: 23px;
+    fill: white;
+    transition: all 0.8s;
+    cursor: pointer;
+    margin: 4px;
+}.socLink_svg:hover{ 
+    fill: #FFC554;
+    transition: all 0.8s;
+ }
+ .socLink_svg_footer{
+    margin: 10px 10px 0 0;
+}
+
+
+
+
+
+/* Адаптив для popUp, боковое меню */
+@media(max-width:800px){
+.wrap_logo svg {
+    width: 31px;
+}
+.wrap_logo p {
+    font-size: 23px;
+}
+.wrap_btns a {
+    padding: 19px;
+    font-size: 21px;
+}
+.socLink_svg {
+    width: 20px;
+    height: 20px;
+}
+.bl_aside_menu, .wrap_aside_menu {
+    width: 400px;
+}
+.wrap_btns{
+    width: 390px;
+}
+}
+
+@media(max-width:650px){
+.btn_up, .btn_phone {
+    width: 40px;
+    height: 40px;
+}
+}
+
+@media(max-width:500px) {
+.wrap_aside_menu, .bl_aside_menu, .aside_menu_list, .wrap_btns {
+    width: 93%;
+}
+.bl_aside_menu{
+    width: 100%;
+}
+}
+
+@media(max-width:450px) {
+.wrap_logo {
+    width: 65%;
+}.wrap_logo p {
+    font-size: 23px;
+}
+.wrap_btns {
+    width: 100%;
+    font-size: 22px;
+}
+.aside_menu_footer {
+    height: 165px;
+}
+}
+
+@media(max-width:400px){
+.wrap_logo p {
+    font-size: 21px;
+}
+}
+
+@media(max-width:400px){
+.wrap_btns {
+    font-size: 21px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* Общая адаптация для файлов: index, page1 */
+@media(max-width:1150px){
+.answer_up span, .answer_up_info p{
+    font-size: 14px;
+}
+.answer_1 > p, .answer_down{
+    font-size: 15px;
+}
+}
+
+@media(max-width:950px){
+.answer_down {
+    padding: 5px;
+}
+}
+
+@media(max-width:600px){
+.h2Bl-2 {
+    padding: 10px;
+    font-size: 21px;
+}
+}
+
+@media(max-width:550px){
+.socLink_svg {
+    width: 19px;
+    height: 19px;
+    margin: 2px;
+}
+.answer_1 > span {
+    height: 80px;
+}
+.answer_up span, .answer_up_info p{
+    font-size: 13px;
+}
+.answer_1 > p, .answer_down{
+    font-size: 14px;
+}
+}
+
+@media(max-width:500px){
+.answer_up {
+    display: block;
+}
+.btn_menu::before, .btn_menu::after {
+    width: 29px;
+    height: 1px;
+}
+.btn_menu::after {
+    top: 26px;
+}
+.btn_menu span {
+    top: 18px;
+    width: 29px;
+    height: 1px;
+}
+}
+
+@media(max-width:450px){
+.answer_up span, .answer_up_info p{
+    font-size: 12px;
+}
+.answer_1 > span, .answer_down{
+    font-size: 13px;
+}
+}

@@ -1,0 +1,14 @@
+@import url('total.css');
+@import url('header.css');
+@import url('main.css');
+@import url('block-1.css');
+@import url('block-2.css');
+@import url('block-3.css');
+@import url('block-4.css');
+@import url('footer.css');
+.visib{
+    visibility: visible;
+}
+.fonMenuShow{
+    display: block;
+}
